@@ -1,0 +1,239 @@
+:root {
+  --brand: #003366;
+  --brand-2: #00509e;
+  --accent: #ffcc00;
+  --ink: #222;
+  --bg: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background: var(--brand-2);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+header {
+  background: linear-gradient(
+    90deg,
+    var(--brand),
+    var(--brand-2)
+  );
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+}
+nav a:link {
+  color: #fff;
+}
+nav a:visited {
+  color: #e6f0ff;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+nav a:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.02) rotate(0.2deg);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
+}
+.card img {
+  width: 100%;
+  border-radius: 0.75rem;
+  display: block;
+}
+.card img {
+  filter: grayscale(12%) brightness(95%);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+thead {
+  background: #eef3fb;
+}
+th,
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e6e9ef;
+  text-align: left;
+}
+tbody tr:hover {
+  background: #fafbfd;
+}
+
+footer {
+  margin-top: 2rem;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 2rem 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-wrap {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+.form-badge {
+  position: absolute;
+  right: 16px;
+  top: -12px;
+  background: var(--accent);
+  color: #111;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: rotate(-3deg);
+}
+
+#highlight {
+  background: #fffde7;
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(220px, 1fr)
+  );
+  gap: 0.75rem;
+}
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: transform 0.25s ease;
+}
+.gallery img:hover {
+  transform: scale(1.035);
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

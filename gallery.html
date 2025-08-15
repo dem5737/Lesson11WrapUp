@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Gallery Lesson 11 Wrap-Up</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="site-title">My Lesson 11 Website</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Gallery</h1>
+      <p>Click any image to view it larger!</p>
+      <section class="gallery">
+        <img
+          src="images/img1.jpg"
+          alt="Gallery image 1"
+          onclick="openLightbox(this.src, this.alt)"
+        />
+        <img
+          src="images/img2.png"
+          alt="Gallery image 2"
+          onclick="openLightbox(this.src, this.alt)"
+        />
+        <img
+          src="images/img3.png"
+          alt="Gallery image 3"
+          onclick="openLightbox(this.src, this.alt)"
+        />
+        <img
+          src="images/img4.png"
+          alt="Gallery image 4"
+          onclick="openLightbox(this.src, this.alt)"
+        />
+        <img
+          src="images/img5.png"
+          alt="Gallery image 5"
+          onclick="openLightbox(this.src, this.alt)"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h4>Contact</h4>
+          <p>Email: dem5737@psu.edu</p>
+        </div>
+        <div>
+          <h4>Site Map</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

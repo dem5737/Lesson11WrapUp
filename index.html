@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Home Lesson 11 Wrap-Up</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="site-title">My Lesson 11 Website</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Welcome!</h1>
+
+        <div style="margin-top: 1rem">
+          <button class="btn" onclick="changeHeaderColor()">
+            Change Header Gradient
+          </button>
+          <button class="btn" onclick="showRandomFact()">
+            Show Random Fact
+          </button>
+        </div>
+        <p id="factBox" style="margin-top: 0.75rem"></p>
+      </section>
+
+      <section class="cards">
+        <article class="card">
+          <img
+            src="images/img1.jpg"
+            alt="Sample image one"
+          />
+          <h3>About</h3>
+          <p>Learn more about Golf.</p>
+          <a class="btn" href="about.html">Read more</a>
+        </article>
+        <article class="card">
+          <img
+            src="images/img2.png"
+            alt="Sample image two"
+          />
+          <h3>Gallery</h3>
+          <p>Browse a curated gallery.</p>
+          <a class="btn" href="gallery.html"
+            >Open gallery</a
+          >
+        </article>
+        <article class="card">
+          <img
+            src="images/img3.png"
+            alt="Sample image three"
+          />
+          <h3>Info</h3>
+          <p>Check some facts about golf.</p>
+          <a class="btn" href="info.html">View info</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h4>Contact</h4>
+          <p>Email: dem5737@psu.edu</p>
+          <p>GitHub: github.com/dem5737</p>
+        </div>
+        <div>
+          <h4>Sites</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
